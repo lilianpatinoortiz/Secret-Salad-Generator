@@ -5,9 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
+    <!-- Dynamic CSS-->
+    <!-- Acceptance criteria: This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. -->
+    <!-- reference: https://css-tricks.com/forums/topic/load-random-css-on-page-load/#post-247699 -->
+    <script>
+      (function () {
+        var sheet = document.createElement("link"); // create link in the document
+        sheet.rel = "stylesheet"; // link will be of the type sylesheet
+        sheet.href =
+          "./assets/css/style-" + (Math.floor(Math.random() * 3) + 1) + ".css"; // 3 options of css
+        document.getElementsByTagName("head")[0].appendChild(sheet); // we append the link into our head element
+      })();
+    </script>
     <div class="wrapper">
       <header>
         <h1>Password Generator</h1>
