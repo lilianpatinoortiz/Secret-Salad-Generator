@@ -17,6 +17,7 @@
         sheet.rel = "stylesheet"; // link will be of the type sylesheet
         sheet.href =
           "./assets/css/style-" + (Math.floor(Math.random() * 3) + 1) + ".css"; // 3 options of css
+        console.log("Style used: " + sheet.href);
         document.getElementsByTagName("head")[0].appendChild(sheet); // we append the link into our head element
       })();
     </script>
@@ -38,7 +39,7 @@
           ></textarea>
         </div>
         <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+          <button id="generate" class="btn">Generate</button>
         </div>
       </div>
     </div>
