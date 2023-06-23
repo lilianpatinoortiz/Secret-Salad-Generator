@@ -10,12 +10,13 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: blue;
 }
 
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
+  background-image: url(../images/salad.jpg);
+  background-size: cover;
 }
 
 .wrapper {
@@ -35,7 +36,7 @@ header {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
   border-width: 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  box-shadow: rgb(10 10 10 / 15%) 0px 0px 20px 10px;
   color: hsl(206, 17%, 28%);
   font-size: 18px;
   margin: 0 auto;
@@ -43,6 +44,9 @@ header {
   padding: 30px 40px;
 }
 
+.card:hover {
+  box-shadow: rgb(10 10 10 / 30%) 0px 0px 20px 10px;
+}
 .card-header::after {
   content: " ";
   display: block;
@@ -75,7 +79,7 @@ header {
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color: hsl(76.89deg 100% 26.47%);
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
