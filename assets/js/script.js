@@ -15,6 +15,8 @@ let numericMessage =
 let specialMessage =
   "Do you want to inlcude special characters?\nPlease click OK to confirm, else Cancel.";
 let sizeNotAllowedMessage = "That's not an allowed size :( Please try again!";
+let emptyBowlMessage =
+  "You have to confirm at least one of the characters group :(\nPlease try again!";
 let numericCharacters = "0123456789".split("");
 let lowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz".split("");
 let upperCaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
@@ -58,8 +60,7 @@ function generateSalad() {
   // Welcome confirmation
   if (confirm(welcomeMessage)) {
     let mySaladSize = prompt(sizeMessage); // Request size
-    var salad = "";
-    console.log(salad);
+    var salad = ""; // new password
     let bowl = []; // place to mix the characters selected
 
     // Verification: length is at least minSaladSize characters and no more than maxSaladSize characters
@@ -76,14 +77,20 @@ function generateSalad() {
       if (confirm(specialMessage)) {
         bowl = bowl.concat(specialCharacters); // if specials included, concat the arrays
       }
+      // Only if at least one selection was made, we proceed
+      if (bowl.length > 0) {
+        // Generate salad from the bowl! (from all the selections of characters, we get random picks)
+        for (var i = 0, n = bowl.length; i < mySaladSize; ++i) {
+          salad += bowl[Math.floor(Math.random() * n)];
+        }
+        // return the new password
+        return salad;
+      } else {
+        alert(emptyBowlMessage);
+      }
     } else {
-      alert(sizeNotAllowedMessage); // size not allowed :(
+      alert(sizeNotAllowedMessage);
     }
-    // Generate salad from the bowl! (from all the selections, we get random picks)
-    for (var i = 0, n = bowl.length; i < mySaladSize; ++i) {
-      salad += bowl[Math.floor(Math.random() * n)];
-    }
-    return salad;
   }
 }
 
