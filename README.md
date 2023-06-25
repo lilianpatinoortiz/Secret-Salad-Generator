@@ -1,14 +1,11 @@
 # Secret-Salad-Generator
-### Javascript Challenge - Password Generator 🔐
+### Javascript Challenge - Password Generator 🥗
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+This project was more challenging than the others, I have to admit at the beginning I really didn't know how to do the logic to generate a random password with criteria given my the user.
+I used what we have learned in class to store the data and loop to generate the final password. I also had to do validations before generating it to make sure the project didn't crash or show wrong data.
+This challenge was fun!
 
 ## Table of Contents (Optional)
 
@@ -21,46 +18,43 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+To run the project in your local machine:
+
+1. Open visual studio in your computer or laptop
+2. Clone the git project: https://github.com/lilianpatinoortiz/Secret-Salad-Generator
+3. Pull the latest from the 'main' branch
+4. Locate the index.html file
+5. Right click on the file and select "Open in default browser"
+6. A new window on your default browser should open with the web page containing the project
+
+Access the deployed project here: https://lilianpatinoortiz.github.io/Secret-Salad-Generator/
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+After running the project you will be able to access the site. In this site you will be able to generate your salad (random password).
+The site will prompt some alerts to get your input on some of the decisions like size, and characters to be included.
+Below I show how the site looks at the begining, how the alerts are prompted and an example of a password generated:
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
+![Style Screenshot](assets/images/ss1.png)
+![Input Screenshot](assets/images/input.png)
+![Password Screenshot](assets/images/password.png)
 
-![alt text](assets/images/screenshot.png)
+The site also loads dynamic css as required in the acceptance criteria, below I show the other two different styles that can load randomly:
+
+![Style 2 Screenshot](assets/images/ss2.png)
+![Style 3 Screenshot](assets/images/ss3.png)
+
+
+Enjoy generating your salad! 🥗
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+The main resources used:
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+- Bootcamp canvas - Module 03
+- How to load dynamic css: https://css-tricks.com/forums/topic/load-random-css-on-page-load/#post-247699
+- Background Images from: https://www.pexels.com/
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-
-Badges aren't necessary, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute to it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+Please refer to the LICENSE in the repo.
