@@ -1,5 +1,4 @@
 /* VARIABLES AND MESSAGES TO USE */
-var charactersDecisionsTaken = 0;
 let minSaladSize = 8;
 let maxSaladSize = 128;
 let welcomeMessage =
