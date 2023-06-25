@@ -15,31 +15,76 @@ let numericMessage =
 let specialMessage =
   "Do you want to inlcude special characters?\nPlease click OK to confirm, else Cancel.";
 let sizeNotAllowedMessage = "That's not an allowed size :( Please try again!";
+let numericCharacters = "0123456789".split("");
+let lowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz".split("");
+let upperCaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+let specialCharacters = [
+  "!",
+  '"',
+  "#",
+  "$",
+  "%",
+  "&",
+  "'",
+  "(",
+  ")",
+  "*",
+  "+",
+  ",",
+  "-",
+  ".",
+  "/",
+  ":",
+  ";",
+  "<",
+  "=",
+  ">",
+  "?",
+  "@",
+  "[",
+  "\\",
+  "]",
+  "^",
+  "_",
+  "`",
+  "{",
+  "|",
+  "}",
+  "~",
+];
 
 /* DECLARATION AND USE OF FUNCTIONS */
 function generateSalad() {
-  var salad = "";
-
   // Welcome confirmation
   if (confirm(welcomeMessage)) {
-    // Request size
-    let mySaladSize = prompt(sizeMessage);
+    let mySaladSize = prompt(sizeMessage); // Request size
+    var salad = "";
+    console.log(salad);
+    let bowl = []; // place to mix the characters selected
+
     // Verification: length is at least minSaladSize characters and no more than maxSaladSize characters
     if (mySaladSize >= minSaladSize && mySaladSize <= maxSaladSize) {
-      // Characters decisions
       if (confirm(lowercaseMessaage)) {
+        bowl = bowl.concat(lowerCaseCharacters); // if lowercases included, concat the arrays
       }
       if (confirm(uppercaseMessage)) {
+        bowl = bowl.concat(upperCaseCharacters); // if uppercases included, concat the arrays
       }
       if (confirm(numericMessage)) {
+        bowl = bowl.concat(numericCharacters); // if numerics included, concat the arrays
       }
       if (confirm(specialMessage)) {
+        bowl = bowl.concat(specialCharacters); // if specials included, concat the arrays
       }
     } else {
-      alert(sizeNotAllowedMessage);
+      alert(sizeNotAllowedMessage); // size not allowed :(
     }
+    // Generate salad from the bowl! (from all the selections, we get random picks)
+    for (var i = 0, n = bowl.length; i < mySaladSize; ++i) {
+      salad += bowl[Math.floor(Math.random() * n)];
+    }
+    return salad;
   }
-  return salad;
 }
 
 // Get references to the #generate element
